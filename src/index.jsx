@@ -10,7 +10,7 @@ import remoteActionMiddleware from './remote_action_middleware';
 
 import { AppContainer } from './components/App';
 
-// import './styles/styles.scss';
+import './styles/styles.scss';
 
 const createStoreDevTools = compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore);
