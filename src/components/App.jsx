@@ -10,6 +10,7 @@ export const App = React.createClass({
     return <div>
       <h1>Hello World</h1>
       <h5>Development Branch</h5>
+      <p>Test push</p>
     </div>;
   }
 });
