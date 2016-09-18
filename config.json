@@ -1,0 +1,8 @@
+{
+  "host": "https://stageapi.areametrics.com",
+  "host2": "http://api.app08.prd.nyc2.areametrics.com:3000",
+  "test_app": "f4f2664ea0891dc873a4358b16b12eaf91facec51f4259c7be17d0330ea6391e",
+  "token": "YkYcWTiPVtUmawrFiGZWFnCZygQfaV",
+  "start_date": "20160701",
+  "end_date": "20160801"
+}
