@@ -9,6 +9,7 @@ export const App = React.createClass({
   render: function() {
     return <div>
       <h1>Hello World</h1>
+      <h5>Development Branch</h5>
     </div>;
   }
 });
