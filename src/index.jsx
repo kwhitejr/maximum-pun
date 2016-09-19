@@ -10,6 +10,7 @@ import thunk from 'redux-thunk';
 import {Router, Route, hashHistory, Redirect } from 'react-router';
 
 import reducer from './reducer';
+import routes from './routes';
 import remoteActionMiddleware from './remote_action_middleware';
 
 import { AppContainer } from './components/App';
@@ -27,13 +28,6 @@ const createStoreWithMiddleWare = applyMiddleware(
   remoteActionMiddleware
 )(createStoreDevTools);
 const store = createStoreWithMiddleWare(reducer);
-
-// TODO: extract Routes to routes.js
-const routes = <Route>
-  <Route path="/" component={AppContainer} >
-  </Route>
-</Route>
-
 
 ReactDOM.render(
   <Provider store={store}>

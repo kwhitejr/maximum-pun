@@ -5,12 +5,11 @@ import { RouteHandler } from 'react-router';
 // import * as actionCreators from '../action_creators';
 
 // TODO: re-label this to Layout and use as template for each page
-export const App = React.createClass({
+const App = React.createClass({
 
   render: function() {
     return <div>
-      <h1>Hello World</h1>
-      <h5>Serverside Rendering Branch</h5>
+      {this.props.children}
     </div>;
   }
 });
