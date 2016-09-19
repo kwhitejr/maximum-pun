@@ -1,3 +1,4 @@
+// basic reducer to set initial state
 function setState(state, newState) {
   return Object.assign({}, state, newState);
 }
