@@ -4,7 +4,7 @@ import { RouteHandler } from 'react-router';
 
 import Header from './Header';
 
-// import * as actionCreators from '../action_creators';
+import * as actionCreators from '../action_creators';
 
 // TODO: re-label this to Layout and use as template for each page
 export const App = React.createClass({
@@ -21,4 +21,4 @@ function mapStateToProps(state) {
   return state;
 }
 
-export const AppContainer = connect(mapStateToProps /*, actionCreators*/)(App);
+export const AppContainer = connect(mapStateToProps, actionCreators)(App);
