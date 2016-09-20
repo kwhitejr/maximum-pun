@@ -15,7 +15,7 @@ import remoteActionMiddleware from './remote_action_middleware';
 
 import { AppContainer } from './components/App';
 
-import './styles/styles.scss';
+import './static/styles/styles.scss';
 
 // DevTools allow use of Chrome's Redux plugin
 const createStoreDevTools = compose(
