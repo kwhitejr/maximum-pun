@@ -14,8 +14,6 @@ import reducer from './reducer';
 import routes from './routes';
 import remoteActionMiddleware from './remote_action_middleware';
 
-import { AppContainer } from './components/App';
-
 import './static/styles/styles.scss';
 
 const reducers = combineReducers({
