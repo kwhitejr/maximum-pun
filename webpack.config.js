@@ -5,6 +5,7 @@ var STYLES_DIR = path.resolve(__dirname, 'src/static/styles');
 
 module.exports = {
   entry: [
+    'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
     './src/index.jsx'
@@ -13,7 +14,7 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'react-hot!babel'
+      loaders: ['babel-loader']
     }, {
       test: /\.json$/,
       loader: 'json'

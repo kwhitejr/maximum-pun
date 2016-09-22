@@ -9,12 +9,19 @@ function setToStore(state, data, label) {
   return Object.assign({}, state, newObj);
 }
 
+function handleSubmit(state, formObj) {
+  console.log(formObj);
+  return state;
+}
+
 export default function(state = {}, action) {
   switch (action.type) {
   case 'SET_STATE':
     return setState(state, action.state);
   case 'SET_TO_STORE':
     return setToStore(state, action.data, action.label);
+  case 'HANDLE_SUBMIT':
+    return handleSubmit(state, action.formObj);
   }
   return state;
 }

@@ -12,3 +12,10 @@ export function setToStore(data, label) {
     label
   };
 }
+
+export function handleSubmit(formObj) {
+  return {
+    type: 'HANDLE_SUBMIT',
+    formObj
+  };
+}
