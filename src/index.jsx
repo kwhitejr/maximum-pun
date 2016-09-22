@@ -4,7 +4,8 @@ This is the entry point for webpack. Nothing from index actually gets rendered, 
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { compose, createStore, applyMiddleware } from 'redux';
+import { compose, createStore, applyMiddleware, combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import {Router, hashHistory } from 'react-router';
@@ -17,6 +18,10 @@ import { AppContainer } from './components/App';
 
 import './static/styles/styles.scss';
 
+const reducers = combineReducers({
+  reducer: reducer,
+  form: formReducer
+});
 // DevTools allow use of Chrome's Redux plugin
 const createStoreDevTools = compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore);
@@ -27,7 +32,7 @@ const createStoreWithMiddleWare = applyMiddleware(
   thunk,
   remoteActionMiddleware
 )(createStoreDevTools);
-const store = createStoreWithMiddleWare(reducer);
+const store = createStoreWithMiddleWare(reducers);
 
 ReactDOM.render(
   <Provider store={store}>
