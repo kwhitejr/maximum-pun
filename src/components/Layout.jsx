@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { RouteHandler } from 'react-router';
 
-import Header from './Header';
+import Header from './partials/Header';
 
 import * as actionCreators from '../action_creators';
 

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {reduxForm} from 'redux-form';
 
-import * as actionCreators from '../action_creators';
+import * as actionCreators from '../../action_creators';
 
 class ContactForm extends Component {
 

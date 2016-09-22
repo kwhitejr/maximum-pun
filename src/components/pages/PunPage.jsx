@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { ContactForm } from './SubmitPunForm';
+import { ContactForm } from '../forms/SubmitPunForm';
 
 export default class PunPage extends React.Component {
 

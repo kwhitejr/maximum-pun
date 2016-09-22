@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import { LayoutContainer } from './components/Layout';
-import IndexPage from './components/IndexPage';
-import PunPage from './components/PunPage';
-import { ContactFormContainer } from './components/SubmitPunForm';
-import NotFoundPage from './components/NotFoundPage';
+import IndexPage from './components/pages/IndexPage';
+import PunPage from './components/pages/PunPage';
+import { ContactFormContainer } from './components/forms/SubmitPunForm';
+import NotFoundPage from './components/pages/NotFoundPage';
 
 const routes = ( <Route>
     <Route path="/" component={LayoutContainer} >
