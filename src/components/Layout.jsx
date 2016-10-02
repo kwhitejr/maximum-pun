@@ -10,9 +10,11 @@ import * as actionCreators from '../action_creators';
 export const Layout = React.createClass({
 
   render: function() {
-    return <div>
+    return <div className="App">
       <Header />
-      {this.props.children}
+      <div className="App-content">
+        {this.props.children}
+      </div>
     </div>;
   }
 });

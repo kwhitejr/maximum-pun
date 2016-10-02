@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var STYLES_DIR = path.resolve(__dirname, 'src/static/styles');
+var STYLES_DIR = path.resolve(__dirname, 'src/');
 
 module.exports = {
   entry: [
@@ -41,11 +41,11 @@ module.exports = {
     hot: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
-    new webpack.optimize.DedupePlugin(), // removes all the duplicated files
+    // new webpack.HotModuleReplacementPlugin(),
+    // new webpack.DefinePlugin({
+    //   'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    // }),
+    // new webpack.optimize.DedupePlugin(), // removes all the duplicated files
     // new webpack.optimize.OccurenceOrderPlugin(), // helps in reducing the file size of the resulting bundle
     // new webpack.optimize.UglifyJsPlugin({ // minifies and obfuscates the resulting bundle using UglifyJs
     //   compress: { warnings: false },

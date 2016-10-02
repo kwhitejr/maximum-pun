@@ -1,27 +1,44 @@
-// basic reducer to set initial state
 function setState(state, newState) {
   return Object.assign({}, state, newState);
 }
 
-function setToStore(state, data, label) {
-  let newObj = {};
-  newObj[label] = data;
-  return Object.assign({}, state, newObj);
+function receivePuns(state, puns) {
+  return Object.assign({}, state, {
+    puns: puns,
+    loadingPuns: false
+  });
 }
 
-function handleSubmit(state, formObj) {
-  console.log(formObj);
-  return state;
+function requestPuns(state) {
+  return Object.assign({}, state, {
+    loadingPuns: true
+  });
 }
 
-export default function(state = {}, action) {
+function addPun(state, pun) {
+  return Object.assign({}, state, {
+    puns: [
+      ...state.puns,
+      pun
+    ]
+  });
+}
+
+export default function(state = {
+  puns: [],
+  loadingPuns: true,
+}, action) {
   switch (action.type) {
   case 'SET_STATE':
     return setState(state, action.state);
-  case 'SET_TO_STORE':
-    return setToStore(state, action.data, action.label);
-  case 'HANDLE_SUBMIT':
-    return handleSubmit(state, action.formObj);
+  case 'RECEIVE_PUNS':
+    return receivePuns(state, action.puns);
+  case 'REQUEST_PUNS':
+    return requestPuns(state);
+  case 'START_PUN_ADD':
+    return startPunAdd(state);
+  case 'ADD_PUN':
+    return addPun(state, action.pun);
   }
   return state;
 }

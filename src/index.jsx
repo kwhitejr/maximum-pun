@@ -17,7 +17,7 @@ import remoteActionMiddleware from './remote_action_middleware';
 import './static/styles/styles.scss';
 
 const reducers = combineReducers({
-  reducer: reducer,
+  main: reducer,
   form: formReducer
 });
 // DevTools allow use of Chrome's Redux plugin
