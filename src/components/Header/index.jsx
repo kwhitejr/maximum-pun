@@ -1,9 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, NavItem } from 'react-bootstrap';
 
-export default React.createClass({
+const Header = () => {
 
-  render() {
     return <div>
       <Navbar fluid>
         <Navbar.Header>
@@ -14,13 +13,13 @@ export default React.createClass({
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="/#/summary">
+            <NavItem eventKey={1} href="/">
               Link 1
             </NavItem>
-            <NavItem eventKey={1} href="/#/summary">
+            <NavItem eventKey={2} href="/">
               Link 2
             </NavItem>
-            <NavItem eventKey={1} href="/#/summary">
+            <NavItem eventKey={3} href="/">
               Link 3
             </NavItem>
           </Nav>
@@ -35,5 +34,10 @@ export default React.createClass({
         </Navbar.Collapse>
       </Navbar>
     </div>;
-  }
-});
+};
+
+Header.propTypes = {
+
+};
+
+export default Header
