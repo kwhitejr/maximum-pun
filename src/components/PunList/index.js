@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Pun from '../Pun';
+import './styles.css';
 
 const PunList = ({puns, onAdd}) => {
 

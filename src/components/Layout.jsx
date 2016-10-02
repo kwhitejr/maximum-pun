@@ -20,6 +20,7 @@ export const Layout = React.createClass({
 });
 
 function mapStateToProps(state) {
+  // limit this
   return state;
 }
 
